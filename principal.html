@@ -39,7 +39,7 @@
       justify-content: space-between;
     }
     .logo {
-      font-size: 24px;
+      font-size: clamp(20px, 5vw, 24px);
       font-weight: bold;
       color: #0073b1;
     }
@@ -47,23 +47,40 @@
       list-style: none;
       display: flex;
       flex-wrap: wrap;
+      gap: 10px;
     }
-    nav ul li { margin: 0 10px; }
+    nav ul li {
+      margin: 0 10px;
+    }
     nav ul li a {
       text-decoration: none;
       color: #333;
       font-weight: 500;
       transition: color 0.3s;
+      font-size: clamp(14px, 4vw, 16px);
     }
-    nav ul li a:hover { color: #0073b1; }
+    nav ul li a:hover {
+      color: #0073b1;
+    }
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+    }
     /* MAIN – COMPENSA O CABEÇALHO FIXO */
-    main { margin-top: 70px; }
-    section { padding: 60px 20px; min-height: 100vh; }
+    main {
+      margin-top: 70px;
+    }
+    section {
+      padding: clamp(20px, 5vw, 60px) 20px;
+      min-height: 100vh;
+    }
     
     /* 1. SEÇÃO INÍCIO – HERO E TABELA DE PLANOS */
     #inicio .hero {
       background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;
-      height: 400px;
+      height: clamp(200px, 50vw, 400px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -71,16 +88,17 @@
     }
     #inicio .hero-content {
       background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
+      padding: clamp(10px, 4vw, 20px);
       border-radius: 5px;
+      max-width: 90%;
     }
     #inicio .hero-content h1 {
-      font-size: 36px;
+      font-size: clamp(24px, 6vw, 36px);
       color: #fff;
       margin-bottom: 10px;
     }
     #inicio .hero-content p {
-      font-size: 18px;
+      font-size: clamp(14px, 4vw, 18px);
       color: #ddd;
       margin-bottom: 20px;
     }
@@ -88,13 +106,15 @@
       background: #ffc107;
       color: #333;
       border: none;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px);
+      font-size: clamp(14px, 4vw, 16px);
       border-radius: 25px;
       cursor: pointer;
       transition: background 0.3s;
     }
-    #inicio .hero-content button:hover { background: #e0a800; }
+    #inicio .hero-content button:hover {
+      background: #e0a800;
+    }
     /* Tabela Comparativa de Planos */
     #inicio .plan-table {
       width: 100%;
@@ -106,15 +126,21 @@
     #inicio .plan-table th,
     #inicio .plan-table td {
       border: 1px solid #ddd;
-      padding: 15px;
+      padding: clamp(10px, 3vw, 15px);
     }
     #inicio .plan-table th {
       background: #0073b1;
       color: #fff;
-      font-size: 18px;
+      font-size: clamp(14px, 4vw, 18px);
     }
-    #inicio .plan-table td ul { list-style: none; padding: 0; }
-    #inicio .plan-table td ul li { margin: 5px 0; }
+    #inicio .plan-table td ul {
+      list-style: none;
+      padding: 0;
+    }
+    #inicio .plan-table td ul li {
+      margin: 5px 0;
+      font-size: clamp(12px, 3.5vw, 16px);
+    }
     
     /* 2. SEÇÃO SOBRE – BENEFÍCIOS (GLAMVC PREMIUM) */
     #sobre .sobre-content {
@@ -129,14 +155,24 @@
       text-align: center;
       color: #0077b5;
       margin-bottom: 20px;
+      font-size: clamp(20px, 5vw, 28px);
     }
-    #sobre h2 { 
+    #sobre h2 {
       color: #0077b5;
       margin-top: 20px;
+      font-size: clamp(18px, 4.5vw, 24px);
     }
-    #sobre p { font-size: 16px; margin-bottom: 1rem; }
-    #sobre ul { padding-left: 1.5rem; }
-    #sobre li { margin-bottom: 0.5rem; }
+    #sobre p {
+      font-size: clamp(14px, 4vw, 16px);
+      margin-bottom: 1rem;
+    }
+    #sobre ul {
+      padding-left: 1.5rem;
+    }
+    #sobre li {
+      margin-bottom: 0.5rem;
+      font-size: clamp(14px, 4vw, 16px);
+    }
     #sobre table {
       width: 100%;
       border-collapse: collapse;
@@ -144,10 +180,13 @@
     }
     #sobre th, #sobre td {
       border: 1px solid #ccc;
-      padding: 0.5rem;
+      padding: clamp(8px, 2vw, 10px);
       text-align: left;
+      font-size: clamp(12px, 3.5vw, 14px);
     }
-    #sobre th { background-color: #e6f2f8; }
+    #sobre th {
+      background-color: #e6f2f8;
+    }
     
     /* 3. SEÇÃO PREMIUM – BENEFÍCIOS, ASSINATURA E PAGAMENTO */
     #premium .premium-content {
@@ -155,29 +194,37 @@
       border-radius: 5px;
       max-width: 1200px;
       margin: 40px auto;
-      padding: 40px 20px;
+      padding: clamp(20px, 5vw, 40px) 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    #premium h1 { font-size: 32px; color: #0073b1; margin-bottom: 20px; }
+    #premium h1 {
+      font-size: clamp(24px, 6vw, 32px);
+      color: #0073b1;
+      margin-bottom: 20px;
+    }
     #premium p,
     #premium ul {
-      font-size: 18px;
+      font-size: clamp(14px, 4vw, 18px);
       margin-bottom: 20px;
       line-height: 1.6;
     }
-    #premium ul { list-style: disc inside; }
+    #premium ul {
+      list-style: disc inside;
+    }
     #premium button {
       background: #ffc107;
       color: #333;
       border: none;
       border-radius: 25px;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px);
+      font-size: clamp(14px, 4vw, 16px);
       cursor: pointer;
       transition: background 0.3s;
     }
-    #premium button:hover { background: #e0a800; }
-    /* Formulário de Assinatura e Pagamento (oculto inicialmente) */
+    #premium button:hover {
+      background: #e0a800;
+    }
+    /* Formulário de Assinatura e Pagamento */
     #subscription-form {
       display: none;
       margin-top: 30px;
@@ -186,26 +233,29 @@
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
+      font-size: clamp(14px, 4vw, 16px);
     }
     #subscription-form input {
       width: 100%;
-      padding: 8px;
+      padding: clamp(6px, 2vw, 8px);
       margin-bottom: 15px;
       border: 1px solid #ddd;
       border-radius: 4px;
+      font-size: clamp(14px, 4vw, 16px);
     }
     #subscription-form button {
       background: #0073b1;
       color: #fff;
       border: none;
-      padding: 10px 20px;
+      padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px);
       border-radius: 5px;
-      font-size: 16px;
+      font-size: clamp(14px, 4vw, 16px);
       cursor: pointer;
       transition: background 0.3s;
     }
-    #subscription-form button:hover { background: #005580; }
-    /* Campos para Cartão de Crédito (exibidos se selecionado) */
+    #subscription-form button:hover {
+      background: #005580;
+    }
     #credit-card-details {
       display: block;
       margin-bottom: 15px;
@@ -217,30 +267,47 @@
       border-radius: 5px;
       max-width: 1200px;
       margin: 40px auto;
-      padding: 40px 20px;
+      padding: clamp(20px, 5vw, 40px) 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    #vagas h1 { color: #0073b1; margin-bottom: 20px; font-size: 28px; }
+    #vagas h1 {
+      color: #0073b1;
+      margin-bottom: 20px;
+      font-size: clamp(20px, 5vw, 28px);
+    }
     #vagas .job {
       border-bottom: 1px solid #ddd;
       padding: 15px 0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      gap: 10px;
     }
-    #vagas .job:last-child { border-bottom: none; }
-    #vagas .job h3 { font-size: 20px; color: #0073b1; margin-bottom: 5px; }
-    #vagas .job p { font-size: 16px; }
+    #vagas .job:last-child {
+      border-bottom: none;
+    }
+    #vagas .job h3 {
+      font-size: clamp(16px, 4.5vw, 20px);
+      color: #0073b1;
+      margin-bottom: 5px;
+    }
+    #vagas .job p {
+      font-size: clamp(14px, 4vw, 16px);
+    }
     #vagas .job button {
       background: #0073b1;
       color: #fff;
       border: none;
-      padding: 8px 15px;
+      padding: clamp(6px, 2vw, 8px) clamp(10px, 3vw, 15px);
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s;
+      font-size: clamp(14px, 4vw, 16px);
     }
-    #vagas .job button:hover { background: #005580; }
+    #vagas .job button:hover {
+      background: #005580;
+    }
     /* Modal para candidatura a vaga */
     .modal {
       display: none;
@@ -257,7 +324,7 @@
     }
     .modal-content {
       background: #fff;
-      padding: 20px;
+      padding: clamp(15px, 4vw, 20px);
       border-radius: 5px;
       width: 90%;
       max-width: 500px;
@@ -267,11 +334,19 @@
       position: absolute;
       top: 10px;
       right: 15px;
-      font-size: 28px;
+      font-size: clamp(20px, 5vw, 28px);
       color: #aaa;
       cursor: pointer;
     }
-    .modal-close:hover { color: #333; }
+    .modal-close:hover {
+      color: #333;
+    }
+    .modal-content h2 {
+      font-size: clamp(18px, 5vw, 24px);
+    }
+    .modal-content p {
+      font-size: clamp(14px, 4vw, 16px);
+    }
     
     /* 5. SEÇÃO MENSAGENS – BATE-PAPO */
     #mensagens .messages-content {
@@ -279,10 +354,14 @@
       border-radius: 5px;
       max-width: 800px;
       margin: 40px auto;
-      padding: 40px 20px;
+      padding: clamp(20px, 5vw, 40px) 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    #mensagens h1 { color: #0073b1; margin-bottom: 20px; font-size: 28px; }
+    #mensagens h1 {
+      color: #0073b1;
+      margin-bottom: 20px;
+      font-size: clamp(20px, 5vw, 28px);
+    }
     #mensagens .message-container {
       max-height: 400px;
       overflow-y: auto;
@@ -291,31 +370,36 @@
     #mensagens .message {
       background: #f7f9fc;
       border-radius: 10px;
-      padding: 10px 15px;
+      padding: clamp(8px, 2vw, 10px) clamp(10px, 3vw, 15px);
       margin-bottom: 10px;
-      font-size: 16px;
+      font-size: clamp(14px, 4vw, 16px);
     }
     #mensagens .input-container {
       display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     #mensagens .input-container input {
       flex: 1;
-      padding: 10px;
+      padding: clamp(8px, 2vw, 10px);
       border: 1px solid #ddd;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: clamp(14px, 4vw, 16px);
     }
     #mensagens .input-container button {
       background: #0073b1;
       color: #fff;
       border: none;
-      padding: 10px 20px;
+      padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px);
       margin-left: 10px;
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s;
+      font-size: clamp(14px, 4vw, 16px);
     }
-    #mensagens .input-container button:hover { background: #005580; }
+    #mensagens .input-container button:hover {
+      background: #005580;
+    }
     
     /* 6. SEÇÃO MINHA REDE – CONEXÕES */
     #minharede .network-content {
@@ -323,29 +407,42 @@
       border-radius: 5px;
       max-width: 800px;
       margin: 40px auto;
-      padding: 40px 20px;
+      padding: clamp(20px, 5vw, 40px) 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    #minharede h1 { color: #0073b1; margin-bottom: 20px; font-size: 28px; }
+    #minharede h1 {
+      color: #0073b1;
+      margin-bottom: 20px;
+      font-size: clamp(20px, 5vw, 28px);
+    }
     #minharede .connection {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 15px;
       border-bottom: 1px solid #ddd;
+      gap: 10px;
     }
-    #minharede .connection:last-child { border-bottom: none; }
-    #minharede .connection p { font-size: 16px; }
+    #minharede .connection:last-child {
+      border-bottom: none;
+    }
+    #minharede .connection p {
+      font-size: clamp(14px, 4vw, 16px);
+    }
     #minharede .connection button {
       background: #0073b1;
       color: #fff;
       border: none;
-      padding: 8px 15px;
+      padding: clamp(6px, 2vw, 8px) clamp(10px, 3vw, 15px);
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s;
+      font-size: clamp(14px, 4vw, 16px);
     }
-    #minharede .connection button:hover { background: #005580; }
+    #minharede .connection button:hover {
+      background: #005580;
+    }
     
     /* 7. SEÇÃO NOTIFICAÇÕES */
     #notificacoes .notification-content {
@@ -353,27 +450,33 @@
       border-radius: 5px;
       max-width: 800px;
       margin: 40px auto;
-      padding: 40px 20px;
+      padding: clamp(20px, 5vw, 40px) 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    #notificacoes h1 { color: #0073b1; margin-bottom: 20px; font-size: 28px; }
+    #notificacoes h1 {
+      color: #0073b1;
+      margin-bottom: 20px;
+      font-size: clamp(20px, 5vw, 28px);
+    }
     #notificacoes .notification {
       background: #f9f9f9;
       border-left: 5px solid #0073b1;
-      padding: 15px 20px;
+      padding: clamp(10px, 3vw, 15px) clamp(15px, 4vw, 20px);
       margin-bottom: 10px;
       position: relative;
-      font-size: 16px;
+      font-size: clamp(14px, 4vw, 16px);
     }
     #notificacoes .notification .notification-close {
       position: absolute;
       top: 10px;
       right: 10px;
       cursor: pointer;
-      font-size: 18px;
+      font-size: clamp(14px, 4vw, 18px);
       color: #999;
     }
-    #notificacoes .notification .notification-close:hover { color: #333; }
+    #notificacoes .notification .notification-close:hover {
+      color: #333;
+    }
     
     /* 8. SEÇÃO COBRANÇA E SEGURANÇA */
     #cobranca {
@@ -381,42 +484,146 @@
       border-radius: 5px;
       max-width: 800px;
       margin: 40px auto;
-      padding: 40px 20px;
+      padding: clamp(20px, 5vw, 40px) 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    #cobranca h1 { color: #0073b1; margin-bottom: 20px; font-size: 28px; }
-    #cobranca ul { list-style: disc; margin-left: 20px; margin-bottom: 20px; }
-    #cobranca li { margin-bottom: 10px; font-size: 16px; }
-    #cobranca p { font-size: 16px; }
+    #cobranca h1 {
+      color: #0073b1;
+      margin-bottom: 20px;
+      font-size: clamp(20px, 5vw, 28px);
+    }
+    #cobranca ul {
+      list-style: disc;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    #cobranca li {
+      margin-bottom: 10px;
+      font-size: clamp(14px, 4vw, 16px);
+    }
+    #cobranca p {
+      font-size: clamp(14px, 4vw, 16px);
+    }
     
     /* RODAPÉ */
     footer {
       background: #333;
       color: #fff;
-      padding: 20px 0;
+      padding: clamp(15px, 4vw, 20px) 0;
       text-align: center;
     }
     footer ul {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       margin-bottom: 10px;
+      gap: 10px;
     }
-    footer ul li { margin: 0 10px; }
+    footer ul li {
+      margin: 0 10px;
+    }
     footer ul li a {
       color: #fff;
       text-decoration: none;
       transition: color 0.3s;
+      font-size: clamp(12px, 3.5vw, 14px);
     }
-    footer ul li a:hover { color: #ffc107; }
-    footer p { font-size: 14px; }
+    footer ul li a:hover {
+      color: #ffc107;
+    }
+    footer p {
+      font-size: clamp(12px, 3.5vw, 14px);
+    }
     
     /* RESPONSIVIDADE */
+    @media (max-width: 1024px) {
+      .container {
+        width: 95%;
+      }
+      #inicio .plan-table {
+        font-size: clamp(12px, 3vw, 14px);
+      }
+      #sobre table {
+        font-size: clamp(12px, 3vw, 14px);
+      }
+    }
+    
     @media (max-width: 768px) {
-      nav ul { flex-direction: column; align-items: center; }
-      nav ul li { margin: 5px 0; }
-      #inicio .hero-content h1 { font-size: 28px; }
-      #inicio .hero-content p { font-size: 16px; }
+      .hamburger {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      #inicio .hero {
+        height: clamp(150px, 40vw, 300px);
+      }
+      #inicio .plan-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      #sobre table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      #vagas .job {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #mensagens .input-container {
+        flex-direction: column;
+      }
+      #mensagens .input-container button {
+        margin-left: 0;
+        width: 100%;
+      }
+      .modal-content {
+        width: 95%;
+        max-width: 400px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo {
+        font-size: clamp(18px, 5vw, 20px);
+      }
+      #inicio .hero-content h1 {
+        font-size: clamp(20px, 6vw, 24px);
+      }
+      #inicio .hero-content p {
+        font-size: clamp(12px, 4vw, 14px);
+      }
+      #inicio .hero-content button {
+        font-size: clamp(12px, 4vw, 14px);
+        padding: clamp(6px, 2vw, 8px) clamp(10px, 3vw, 15px);
+      }
+      #sobre h1, #premium h1, #vagas h1, #mensagens h1, #minharede h1, #notificacoes h1, #cobranca h1 {
+        font-size: clamp(18px, 5vw, 24px);
+      }
+      #premium .premium-content, #vagas .jobs-content, #mensagens .messages-content, #minharede .network-content, #notificacoes .notification-content, #cobranca {
+        padding: clamp(15px, 4vw, 20px);
+      }
+      footer ul li {
+        margin: 5px;
+      }
     }
   </style>
 </head>
@@ -425,6 +632,7 @@
   <header>
     <div class="container">
       <div class="logo">GLAMVC</div>
+      <div class="hamburger">☰</div>
       <nav>
         <ul>
           <li><a href="#inicio">Início</a></li>
@@ -681,15 +889,15 @@
       <div class="notification-content">
         <h1>Notificações</h1>
         <div class="notification">
-          <span class="notification-close">&times;</span>
+          <span class="notification-close">×</span>
           <p><strong>Mensagem:</strong> João enviou uma nova mensagem para você.</p>
         </div>
         <div class="notification">
-          <span class="notification-close">&times;</span>
+          <span class="notification-close">×</span>
           <p><strong>Rede:</strong> Maria aceitou sua solicitação de conexão.</p>
         </div>
         <div class="notification">
-          <span class="notification-close">&times;</span>
+          <span class="notification-close">×</span>
           <p><strong>Vagas:</strong> Nova oportunidade: Desenvolvedor Front-end.</p>
         </div>
       </div>
@@ -712,7 +920,7 @@
   <!-- MODAL PARA CANDIDATURA A VAGA -->
   <div id="modalJob" class="modal">
     <div class="modal-content">
-      <span class="modal-close">&times;</span>
+      <span class="modal-close">×</span>
       <h2 id="jobTitleModal">Candidatura para Vaga</h2>
       <p>Você está se candidatando para a vaga de <strong id="jobNameModal"></strong>. Deseja confirmar sua candidatura?</p>
       <div style="text-align:right; margin-top:20px;">
@@ -730,11 +938,26 @@
       <li><a href="#">Termos</a></li>
       <li><a href="#">Privacidade</a></li>
     </ul>
-    <p>&copy; 2025 GLAMVC Corporation. Todos os direitos reservados.</p>
+    <p>© 2025 GLAMVC Corporation. Todos os direitos reservados.</p>
   </footer>
   
   <!-- SCRIPTS DE FUNCIONALIDADES -->
   <script>
+    /* HAMBURGER MENU TOGGLE */
+    const hamburger = document.querySelector('.hamburger');
+    const navUl = document.querySelector('nav ul');
+    
+    hamburger.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+    });
+    
+    /* Fecha o menu ao clicar em um link */
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navUl.classList.remove('active');
+      });
+    });
+    
     /* MODAL DE CANDIDATURA – VAGAS */
     const btnCandidatar = document.querySelectorAll(".btnCandidatar");
     const modalJob = document.getElementById("modalJob");
@@ -775,7 +998,6 @@
       e.preventDefault();
       const nome = document.getElementById("nome").value;
       const email = document.getElementById("email").value;
-      // Neste exemplo, assume-se a validação dos campos de pagamento se aplicável.
       alert("Obrigado, " + nome + "! Sua assinatura com o email " + email + " foi confirmada e o pagamento processado com sucesso.");
       document.getElementById("subscription-form").style.display = "none";
       this.reset();
@@ -811,7 +1033,6 @@
         container.appendChild(newMessage);
         input.value = "";
         container.scrollTop = container.scrollHeight;
-        // Simula resposta automática após 1 segundo
         setTimeout(() => {
           const reply = document.createElement("div");
           reply.classList.add("message");
