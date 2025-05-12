@@ -1,0 +1,194 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    color: #323232;
+    border: none;
+}
+
+body {
+    background: url(../img/tela.jpg) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+a, label {
+    font-size: 0.9rem;
+}
+
+a:hover {
+    color: #0073b1;
+    text-decoration: underline;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Container de login */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    padding: 20px;
+}
+
+#login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulário */
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #0073b1;
+}
+
+#forgot-pass {
+    text-align: right;
+    display: block;
+    margin-bottom: 20px;
+    color: #0073b1;
+    text-decoration: none;
+}
+
+#forgot-pass:hover {
+    text-decoration: underline;
+}
+
+/* Botão de login */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, #0073b1, #005582);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #005582, #003f63);
+}
+
+/* Redes sociais */
+#social-container {
+    margin-top: 20px;
+}
+
+#social-container p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#icones-redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#icones-redes-sociais img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+#icones-redes-sociais img:hover {
+    transform: scale(1.1);
+}
+
+/* Registro */
+#register-container {
+    margin-top: 20px;
+}
+
+#register-container p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#register-container a {
+    color: #0073b1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#register-container a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
+
+#footer-links {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#footer-links a {
+    color: #0073b1;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
