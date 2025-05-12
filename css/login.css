@@ -137,6 +137,14 @@ footer {
     font-weight: 400;
 }
 
+ #authors {
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+
+        #authors span {
+            font-weight: bold;
+        }
 @media screen and (max-width: 600px) {
     #login-container {
         padding: 20px;
