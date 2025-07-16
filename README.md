@@ -3,7 +3,7 @@
 
 Este é um projeto de rede social desenvolvido como parte de um estudo prático de back-end e front-end, com foco em tecnologias web e integração contínua (CI/CD) com o Netlify.
 
-> ⚙️ Em produção: [Acessar site](https://teu-site.netlify.app)  
+> ⚙️ Em produção: [Acessar site](https://glamvc.netlify.app)  
 > 🚀 Deploy automático via Git → Netlify
 
 
